@@ -1,0 +1,25 @@
+@mixin img ($background-image: none , $cover: none, $no-repeat: none, $posit_center: none)
+    background-image: $background-image
+    background-size: $cover
+    background-repeat: $no-repeat
+    background-position: $posit_center
+
+@mixin size ($width: auto, $height: auto)
+    width: $width
+    height: $height
+
+@mixin flex ($flex: none, $justify: none, $align-items: none, $direction: none)
+    display: $flex
+    justify-content: $justify
+    align-items: $align-items
+    flex-direction: $direction
+
+@mixin font ($size: none, $family: none, $style: none, $weight: none, $height: none, $transform: none, $text_center: none, $color: none)
+    font-size: $size
+    font-family: $family
+    font-style: $style
+    font-weight: $weight
+    line-height: $height
+    text-decoration: $transform
+    text-align: $text_center
+    color: $color

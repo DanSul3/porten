@@ -1,0 +1,247 @@
+@import 'mixin'
+
+*
+    margin: 0
+    padding: 0
+
+a
+    color: #FFFFFF
+    text-decoration: none
+hr
+    width: 100px
+body
+    color: #FFFFFF
+    background: #959393
+
+header, section, footer
+    @include size (100%, auto)
+    @include flex (flex, center, center)
+
+header
+    background: #000000
+    flex-direction: column
+.header_up
+    @include size (100%, 7vh)
+    color: #969696
+    @include flex (flex, center, none)
+    img
+        margin-right: 10px
+    a
+        color: #969696
+    .left_box
+        @include flex (flex)
+
+.header_down
+    @include size (100%, 9vh)
+    @include flex (flex, center, center)
+    background: #0F0F0F
+.inner_header
+    @include size (70%, 100%)
+    @include flex (flex, space-between, center)
+.row
+    @include size (50%, 100%)
+    @include flex (flex, space-between, center)
+    &__item
+        @include flex (flex, space-between, center)
+.nav
+    @include size (75%, 100%)
+    overflow: hidden
+    a
+        padding: 50px 8px
+        white-space: nowrap
+        @include font (1em ,PT Sans, normal, normal, none, uppercase)
+
+.nav a:hover
+    background: #1F1F1F
+
+.icon
+    margin-left: 12px
+    @include size (15%, 100%)
+    @include flex (flex, space-between, center)
+
+.wrapper_main_section
+    @include img ( url("../img/Rectangle 3.png"), cover, no-repeat,center)
+    @include size (100%, 84vh)
+    .inner_main
+        @include size (40%, 100%)
+        @include flex (flex, center, center, column)
+        .border_box
+            border: 2px solid #fff
+            padding: 100px
+            margin-bottom: 20px
+            text-align: center
+            @include flex (flex, center, center, column)
+            img, hr
+                @include size (100%, auto)
+            p
+                @include font (1.3em ,PT Sans, normal, normal, 28px, uppercase, center)
+
+        p
+            @include font (1em ,PT Sans, normal, normal, 120%, uppercase, center)
+
+.wrapper_two_section
+    @include size (100%, 70vh)
+    background: #000
+.left_block_clock
+    @include size (60%, 100%)
+    animation-name: clock_left
+    animation-duration: 2s
+    position: relative
+
+    @keyframes clock_left
+        0%
+            left: -500px
+        100%
+            left: 0
+
+.inner_two
+    @include size (100%, 100%)
+    @include flex (flex, space-evenly, center, column)
+
+
+
+.clock_wrap
+    @include flex (flex, space-between, center)
+    flex-wrap: wrap
+    .clock_box
+        @include size (20%, auto)
+        margin: 25px 20px 0px 0
+        img
+            @include size (100%, auto)
+            background: #191B1C
+            padding: 20px 5px
+
+.right_block_man
+    @include size (40%, 100%)
+    @include flex (flex, flex-end, center, column)
+    @include img ( url("../img/Rectangle 8.png"), cover, no-repeat,center)
+    animation-name: clock_right
+    animation-duration: 2s
+    position: relative
+    animation-delay: 1s
+    
+    
+    
+    
+    a
+        border: 1px solid #fff
+        padding: 8px 15px
+        margin-bottom: 30px
+
+    @keyframes clock_right
+        
+        0%
+            right:-800px
+            
+        100%
+            right: 0
+            
+
+.wrapper_three_section
+    @include size (100%, 60vh)
+    background: #000000
+
+.left_img_costume
+    @include size (40%, 100%)
+    @include img ( url("../img/Rectangle 9.png"), cover, no-repeat,center)
+    animation-name: costume_left
+    animation-duration: 2s
+    position: relative
+
+    @keyframes costume_left
+        0%
+            left: -1500px
+        100%
+            left: 0
+
+.right_block_text
+    @include size (60%, 100%)
+    @include flex (flex, center, center)
+    animation-name: text_right
+    animation-duration: 2s
+    position: relative
+
+    h2
+        @include font (1.8em ,Playfair Display, normal, normal, 40px, uppercase, center)
+    p
+        font-family: PT Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 150%
+        text-align: center
+
+    a
+        border: 1px solid #fff
+        padding: 5px 15px
+
+    @keyframes text_right
+        0%
+            right: -1500px
+        100%
+            right: 0
+
+.inner_three_text
+    @include size (50%, 100%)
+    @include flex (flex, center, center, column)
+    text-align: center
+
+.col
+    &__item
+        margin-top: 20px
+
+
+.wrapper_four_section
+    @include size (100%, 130vh)
+    background: #000000
+    .inner_four_clock
+        @include size (70%, 100%)
+        @include flex (flex, center, center, column)
+
+.wrapper_five_section
+    @include size (100%, 40vh)
+    background: #0F0F0F
+    .inner_five
+        @include size (70%, 100%)
+        @include flex (flex, center, center, column)
+        .icon_coco_box
+            @include size (100%, auto)
+            @include flex (flex, space-between, center)
+            img
+                @include size (20%, auto)
+
+footer
+    flex-direction: column
+    background: #000
+
+.footer_up
+    @include size (100%, 40vh)
+    @include flex (flex, center, center)
+    @include img ( url("../img/Rectangle 15.png"), cover, no-repeat,center)
+    overflow: hidden
+
+.inner_footer
+    @include size (70%, 100%)
+    @include flex (flex, space-between, center)
+    >div
+        @include size (30%, 100%)
+        @include flex (flex, none, center, column)
+        transform: translate(0, 15%)
+
+.footer_row
+    &__item
+        @include size (100%, auto)
+        @include flex (flex, space-between, center)
+.btn_categories
+    @include size (100%, auto)
+    @include flex (flex, center, center)
+    flex-wrap: wrap
+
+    a
+        background: #0F0F0F
+        padding: 10px 20px
+        margin: 20px 5px 0 0
+
+.footer_down
+    @include size (70%, 4vh)
+    @include flex (flex, space-between, center)
